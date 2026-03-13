@@ -1,0 +1,15 @@
+﻿<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+	<Costura CreateTemporaryAssemblies="true" IncludeDebugSymbols="false" DisableCompression="false" VerifyAssemblies="true">
+		<!-- 這裡「不要寫 .dll 副檔名」：Costura 用的是名稱比對 -->
+		<Unmanaged64Assemblies>
+			OpenCvSharpExtern
+			opencv_videoio_ffmpeg4110_64
+		</Unmanaged64Assemblies>
+
+		<!-- 明確把檔案列入嵌入 -->
+		<Files>
+			<Include File="native\OpenCvSharpExtern.dll" />
+			<Include File="native\opencv_videoio_ffmpeg4110_64.dll" />
+		</Files>
+	</Costura>
+</Weavers>
